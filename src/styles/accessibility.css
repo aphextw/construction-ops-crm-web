@@ -1,0 +1,5 @@
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition-duration: 0.01ms !important;
+  }
+}

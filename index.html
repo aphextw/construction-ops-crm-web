@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/stu_logo_no_background_zoom.png?v=2" />
+    <link rel="apple-touch-icon" href="/stu_logo_no_background_zoom.png?v=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#191919" />
+    <title>СТУ</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("stu_theme");
+        const theme = savedTheme === "light" ? "light" : "dark";
+
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute("content", theme === "dark" ? "#191919" : "#f6f5f4");
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

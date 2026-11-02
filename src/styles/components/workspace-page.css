@@ -1,0 +1,119 @@
+.workspace-page {
+  width: 100%;
+  max-width: 1280px;
+  min-width: 0;
+  margin: 0 auto;
+  gap: 24px;
+  color: var(--ink);
+}
+
+.workspace-page-header {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 6px 0 8px;
+}
+
+.workspace-page-header__heading {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.workspace-page-header__heading h1,
+.workspace-page-header__heading p {
+  margin: 0;
+}
+
+.workspace-page-header__heading h1 {
+  color: var(--ink);
+  font-size: 2.05rem;
+  font-weight: 740;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.workspace-page-header__heading p {
+  color: var(--ink-muted);
+  font-size: 0.94rem;
+}
+
+.workspace-page-header__actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-stage-action {
+  padding: 6px;
+  height: 40px;
+}
+
+.workspace-action {
+  padding: 10px;
+  display: inline-flex;
+  height: 40px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--hairline);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease,
+    color 150ms ease,
+    transform 120ms ease;
+}
+
+.workspace-action svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+}
+
+.workspace-action--primary {
+  border-color: var(--stu-blue);
+  background: var(--stu-blue);
+  color: #fff;
+}
+
+.workspace-action--primary:hover:not(:disabled) {
+  border-color: var(--stu-blue-strong);
+  background: var(--stu-blue-strong);
+}
+
+.workspace-action--secondary:hover:not(:disabled),
+.workspace-action--icon:hover:not(:disabled) {
+  border-color: #c9c7c5;
+  background: var(--paper-soft);
+  color: var(--ink);
+}
+
+.workspace-action--icon {
+  width: 40px;
+  padding: 0;
+}
+
+.workspace-action:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.workspace-action:focus-visible {
+  outline: 2px solid var(--stu-blue);
+  outline-offset: 2px;
+}
+
+.workspace-action:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}

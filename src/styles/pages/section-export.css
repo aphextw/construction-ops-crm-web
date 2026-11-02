@@ -1,0 +1,55 @@
+.section-expenses-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 20px 12px;
+}
+
+.section-expenses-heading h2 { margin: 7px 0 0; font-size: 1.08rem; }
+.section-export { max-width: 100%; color: var(--ink); }
+.section-export__menu { position: relative; }
+.section-export__menu > summary { display: flex; align-items: center; gap: 6px; list-style: none; cursor: pointer; }
+.section-export__menu > summary::-webkit-details-marker { display: none; }
+.section-export__menu > summary[aria-disabled="true"] { opacity: 0.6; cursor: wait; }
+.section-export svg { width: 17px; height: 17px; flex: 0 0 17px; }
+.section-export__options {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 20;
+  width: 268px;
+  max-width: calc(100vw - 48px);
+  padding: 4px;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.section-export__options button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+}
+.section-export__options[data-placement="above"] { top: auto; bottom: calc(100% + 6px); }
+.section-export__options button:hover:not(:disabled) { background: var(--paper-soft); }
+.section-export__options button > span { display: grid; min-width: 0; gap: 2px; }
+.section-export__options strong { font-size: 0.84rem; font-weight: 550; }
+.section-export__options small { font-size: 0.74rem; color: var(--ink-muted); }
+.section-export__error, .section-export__notice { max-width: 268px; margin: 6px 0 0; font-size: 0.8rem; overflow-wrap: anywhere; }
+.section-export__error { color: #b42332; }
+.section-export__notice { color: var(--ink-muted); }
+.section-export :is(summary, button):focus-visible { outline: 2px solid var(--stu-blue); outline-offset: 2px; }
+html[data-theme="dark"] .section-export__error { color: #ffb4bc; }
+
+@media (max-width: 640px) {
+  .section-export { margin-left: auto; }
+}

@@ -1,0 +1,62 @@
+.two-column.section-expense-layout {
+  grid-template-columns: minmax(0, 1fr) 260px;
+}
+
+.panel.section-expense-editor {
+  container-type: inline-size;
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.section-expense-editor__heading { margin-bottom: 14px; }
+.section-expense-editor__heading h2 { margin: 0; font-size: 1rem; }
+.section-expense-editor > .notice { margin-bottom: 12px; font-size: 0.84rem; }
+
+.section-expense-form {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.section-expense-form .field { display: grid; align-content: start; gap: 4px; grid-column: span 4; }
+.section-expense-form .section-expense-form__material,
+.section-expense-form .section-expense-form__shop { grid-column: span 8; }
+.section-expense-form .field > span { color: var(--ink-muted); font-size: 0.8rem; line-height: 1.35; }
+.section-expense-form .field input {
+  height: 36px;
+  padding: 7px 10px;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.3;
+  caret-color: var(--stu-blue);
+}
+.section-expense-form .field input::placeholder { color: var(--ink-muted); opacity: 1; }
+.section-expense-form .field input:focus-visible { outline: 2px solid var(--stu-blue); outline-offset: 1px; }
+.section-expense-form__money { position: relative; min-width: 0; }
+.section-expense-form .section-expense-form__money input { padding-right: 30px; font-variant-numeric: tabular-nums; }
+.section-expense-form__money > span { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: var(--ink-muted); pointer-events: none; }
+.section-expense-form__actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-top: 2px; }
+.section-expense-form__actions .button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; padding: 7px 12px; border-radius: 4px; font-size: 0.84rem; }
+.section-expense-form__actions svg { width: 16px; height: 16px; flex-shrink: 0; }
+.section-expense-form__actions .button--primary { min-width: 168px; }
+.section-expense-form__actions .button:disabled { opacity: 0.6; cursor: wait; }
+
+@media (max-width: 1200px) {
+  .two-column.section-expense-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+@container (max-width: 560px) {
+  .section-expense-form .field { grid-column: span 6; }
+  .section-expense-form .section-expense-form__material,
+  .section-expense-form .section-expense-form__quantity,
+  .section-expense-form .section-expense-form__date { grid-column: 1 / -1; }
+}
+
+@media (pointer: coarse) {
+  .section-expense-form .field input,
+  .section-expense-form__actions .button { height: 44px; }
+}

@@ -1,0 +1,78 @@
+:root {
+  font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+  color: #31302e;
+  background: #f7f7f5;
+  line-height: 1.5;
+  font-weight: 400;
+  --stu-blue: #0075de;
+  --stu-blue-strong: #005bab;
+  --paper: #ffffff;
+  --paper-soft: #f6f5f4;
+  --paper-raised: #ffffff;
+  --paper-hover: #fbfaf9;
+  --ink: #31302e;
+  --ink-muted: #615d59;
+  --ink-faint: #8f8b86;
+  --hairline: #e6e6e6;
+  --field: #ffffff;
+  --field-border: #d7deea;
+  --focus-ring: rgba(0, 117, 222, 0.28);
+  --elevation-soft: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--paper-soft);
+  color: var(--ink);
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+::selection {
+  background: #cfe6fb;
+  color: #31302e;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+select {
+-webkit-appearance: none;
+  appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--field) inset;
+  -webkit-text-fill-color: var(--ink);
+  caret-color: var(--ink);
+  transition: background-color 9999s ease-out;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+

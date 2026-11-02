@@ -1,0 +1,26 @@
+.list,
+.timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.list-item,
+.timeline-item,
+.table__row {
+  padding: 12px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.table__head {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d7deea;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.table__head,
+.table__row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
+}
+

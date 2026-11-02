@@ -1,0 +1,193 @@
+.construction-sites-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9f9fb;
+    min-height: 100vh;
+}
+
+.controls-section {
+    margin-bottom: 20px;
+}
+
+.top-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.sort-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 14px;
+    padding: 0 16px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sort-button:hover {
+    background: #f0f0f0;
+}
+
+.filter-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.filter-chip {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 14px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #8E8E93;
+}
+.filter-chip.selected {
+    border-width: 1px;
+}
+.filter-chip:hover {
+    background: #f0f0f0;
+}
+
+.pending-card, .empty-state {
+    background: white;
+    border-radius: 22px;
+    padding: 24px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.project-number {
+    font-size: 13px;
+    color: #8E8E93;
+    font-weight: 600;
+}
+.status-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.object-code {
+    font-size: 13px;
+    color: #8E8E93;
+    margin-bottom: 12px;
+}
+
+.meta-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 8px 0;
+}
+.chip {
+    background: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6c6c70;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.date {
+    font-size: 12px;
+    color: #8E8E93;
+}
+.cost {
+    font-size: 18px;
+    font-weight: 700;
+    color: #34C759;
+}
+
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.1s;
+}
+.fab:hover {
+    transform: scale(1.02);
+}
+
+.bottom-sheet-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+}
+.bottom-sheet-content {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 28px 28px 0 0;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 20px;
+}

@@ -1,0 +1,296 @@
+.app-content {
+  min-width: 0;
+  padding: 30px 36px 56px;
+  background: var(--paper);
+}
+
+.page {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+
+}
+
+.page > *,
+.panel,
+.form-grid,
+.two-column,
+.table {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.page-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page-header--projects {
+  align-items: end;
+}
+
+.page-header--project {
+  align-items: start;
+}
+
+.page-header__content {
+  max-width: 720px;
+}
+
+.page-header h1,
+.auth-card h1 {
+  margin: 4px 0 8px;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.page-header p,
+.auth-card p {
+  margin: 0;
+  color: #64748b;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.toolbar,
+.chip-row,
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolbar--hero {
+  justify-content: flex-end;
+}
+
+.button {
+  flex-direction: row;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 11px;
+  max-height: 60px;
+  height: 48px;
+  background: #e5e7eb;
+  color: #111827;
+  transition: 300ms ease all
+}
+
+.button:hover {
+  filter: brightness(0.9);
+}
+
+.button--primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.button--ghost {
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-color: #d7deea;
+}
+
+.button--success {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+
+.button--warn {
+  background: #fff7ed;
+  color: #c2410c;
+  border-color: #fdba74;
+}
+
+.button--danger {
+  background: #fff1f2;
+  color: #be123c;
+  border-color: #fecdd3;
+}
+
+.button--soft {
+  padding: 9px ;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  font-weight: 400;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(15, 23, 42, 0.34);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.drawer {
+  width: min(100%, 560px);
+  height: 100vh;
+  background: #ffffff;
+  border-left: 1px solid #e2e8f0;
+  box-shadow: -24px 0 48px rgba(15, 23, 42, 0.12);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  animation: drawer-in 0.24s ease;
+}
+
+.drawer--project {
+  padding: 24px 24px 20px;
+}
+
+.drawer__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.drawer__title-group {
+  display: grid;
+  gap: 6px;
+}
+
+.drawer__title-group h2,
+.drawer__title-group p {
+  margin: 0;
+}
+
+.drawer__title-group h2 {
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.drawer__title-group p {
+  color: #64748b;
+}
+
+.drawer__close {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d7deea;
+  border-radius: 999px;
+  background: #fff;
+  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.drawer__close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.drawer__body {
+  align-content: start;
+  gap: 16px;
+  padding-top: 18px;
+  overflow-y: auto;
+}
+
+.drawer__footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+.button--full {
+  width: 100%;
+  justify-content: center;
+}
+
+.panel,
+.project-card,
+.stat-card,
+.section-card,
+.expense-card,
+.auth-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.panel,
+.auth-card {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  flex-direction: column;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 3px;
+}
+
+.section-title--spaced {
+  margin-top: 24px;
+}
+
+.section-title h2,
+.section-card h3,
+.expense-card h3,
+.project-card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.section-title__heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title__heading svg {
+  flex: 0 0 auto;
+  color: #2563eb;
+}
+
+.filters,
+.form-grid,
+.two-column,
+.stats-grid,
+.project-grid,
+.section-list,
+.expense-list,
+.photo-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.filters,
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
